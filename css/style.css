@@ -1,0 +1,138 @@
+:root {
+  --text: #392e2b;
+  --surface: #fff8f6;
+  --surface-highest: #d4c3be;
+  --surface-high: #e2d1cc;
+  --surface-medium: #f1dfda;
+  --surface-low: #ffede8;
+  --surface-lowest: #FFC3B3;
+  --sidebar-width: 5.5rem;
+  --mobile-sidebar-width: 4rem;
+}
+
+html {
+  max-width: 70ch;
+  padding: 3em 1em;
+  margin: auto;
+  line-height: 1.75;
+  font-size: 16px;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  margin: 3rem 0 1rem;
+}
+
+body {
+  background-color: var(--surface-lowest);
+  font-family: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+p,ul,ol {
+  margin-bottom: 2rem;
+  font-size: 1rem;
+  color: #1d1d1d;
+}
+
+.footer {
+  text-align: center;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: var(--sidebar-width);
+  height: 100%;
+  background: var(--surface-low);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 10;
+}
+
+.sidebar__group {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+.sidebar__button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: var(--sidebar-width);
+  height: var(--sidebar-width);
+  background: none;
+  border: none;
+  color: inherit;
+  text-decoration: none;
+  font-size: 1rem;
+  cursor: pointer;
+  position: relative;
+}
+
+.sidebar__button:hover,
+.sidebar__button:focus {
+  background: var(--surface-highest);
+  text-decoration: none;
+}
+
+.sidebar__label {
+  font-size: 0.75rem;
+  margin-top: 0.25rem;
+}
+
+.sidebar__icon {
+  position: relative;
+  display: inline-block;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding-bottom: var(--sidebar-width);
+  }
+
+  .sidebar {
+    top: auto;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: var(--sidebar-width);
+    flex-direction: row;
+    padding: 0;
+  }
+
+  .sidebar__group {
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    gap: 0;
+  }
+
+  .sidebar__group:last-child {
+    display: none;
+  }
+
+  .sidebar__button {
+    width: auto;
+    flex: 1;
+    height: 100%;
+  }
+
+  .product-grid,
+  .product-detail {
+    margin-left: 0;
+    padding: 3rem;
+    gap: 3rem;
+  }
+
+  .product-detail__item {
+    grid-template-columns: 1fr;
+  }
+}
