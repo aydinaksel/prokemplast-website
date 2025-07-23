@@ -68,6 +68,35 @@ h6 {
   margin: 3rem 0 1rem;
 }
 
+h1 {
+  font-size: 2rem;
+  text-align: left;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+p,
+ul,
+ol {
+  margin-bottom: 2rem;
+  font-size: 1rem;
+}
+
+ul {
+  list-style-type: circle;
+  list-style-position: inside;
+}
+
+strong {
+  font-weight: 800;
+}
+
+a {
+  color: var(--md-sys-color-primary);
+}
+
 body {
   line-height: 1.75;
   font-size: 16px;
@@ -76,16 +105,53 @@ body {
   font-family: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
 }
 
-h1 {
-  font-size: 2rem;
-  text-align: center;
+header {
+  background-color: var(--md-sys-color-surface-container-high);
+  height: var(--sidebar-width);
+  margin-left: var(--sidebar-width);
+  width: calc(100% - var(--sidebar-width));
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding-left: 2rem;
 }
 
-p,
-ul,
-ol {
-  margin-bottom: 2rem;
-  font-size: 1rem;
+.header__group {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.main {
+  max-width: 100%;
+  margin-top: var(--sidebar-width);
+  margin-left: var(--sidebar-width);
+  padding: 2rem;
+}
+
+.main--narrow {
+  max-width: 70ch;
+  margin: 0 auto;
+}
+
+footer {
+  max-width: 100%;
+  margin-left: calc(var(--sidebar-width) + 2rem);
+  margin-right: 2rem;
+  margin-top: 5rem;
+  padding: 5rem 3rem;
+  text-align: center;
+  border-top-style: solid;
+  border-width: thin;
+  border-color: var(--md-sys-color-inverse-primary);
+  display: grid;
 }
 
 iframe {
@@ -96,25 +162,14 @@ iframe {
   display: block;
 }
 
-.main {
-  max-width: 100%;
-  margin-left: var(--sidebar-width);
-  padding: 3rem 1rem;
+.company-name {
+  font-size: 2rem;
+  font-weight: 800;
 }
 
-.main--narrow {
-  max-width: 70ch;
-  margin: 0 auto;
-}
-
-.footer {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  text-align: center;
-}
 
 .sidebar {
-  background: var(--md-sys-color-surface-container);
+  background: var(--md-sys-color-surface-container-highest);
   color: var(--md-sys-color-on-primary-container);
   position: fixed;
   top: 0;
@@ -132,6 +187,7 @@ iframe {
   flex-direction: column;
   gap: 1rem;
   align-items: center;
+  justify-content: center;
 }
 
 .sidebar__button {
@@ -171,6 +227,10 @@ iframe {
   gap: 2rem;
 }
 
+.product-filters {
+  padding-bottom: 2rem;
+}
+
 .product-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
@@ -183,7 +243,20 @@ iframe {
   border-radius: 1.168rem;
   flex: 0 0 auto;
   position: relative;
-  padding: 2rem 2rem 4rem 2rem;
+  padding: 2rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+.product-grid__item:hover,
+.product-grid__item:active {
+  background-color: var(--md-sys-color-inverse-primary);
+}
+
+.product-grid__item-icon-wrapper {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-bottom: 2rem;
 }
 
 .product-grid__item-image-wrapper {
@@ -200,13 +273,72 @@ iframe {
   object-fit: cover;
 }
 
+.product-grid__item-details-wrapper {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+.product-grid__item-details {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.product-display__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: start;
+  justify-items: center;
+}
+
+.product-display__image-wrapper {
+  position: sticky;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+}
+
+.product-display__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.product-display__details-wrapper {
+  max-width: 70ch;
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
 @media (max-width: 768px) {
+  header {
+    margin-left: 0;
+    width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
   .main {
     margin-left: 0;
   }
 
-  .footer {
-    margin-bottom: calc(var(--sidebar-width) + 2rem);
+  footer {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-bottom: var(--sidebar-width);
   }
 
   .sidebar {
@@ -234,5 +366,9 @@ iframe {
     width: auto;
     flex: 1;
     height: 100%;
+  }
+
+  .product-grid {
+    grid-template-columns: 1fr;
   }
 }
