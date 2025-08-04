@@ -51,45 +51,45 @@
         <span class="sidebar__label">Contact</span>
       </a>
     </div>
-    <div class="sidebar__group">
-      <button id="toggle-theme" class="sidebar__button" aria-label="Toggle theme">
-        <span class="material-symbols-outlined sidebar__icon">dark_mode</span>
-        <span class="sidebar__label">Theme</span>
-      </button>
-    </div>
+    <div class="sidebar__group"></div>
   </nav>
 
   <header>
     <div class="header__group">
       <div class="company-name">
-        KEMSET
+        PROKEMPLAST
       </div>
     </div>
-    <div class="header__group">
-      <button id="toggle-theme" class="sidebar__button" aria-label="Toggle theme">
-        <span class="material-symbols-outlined sidebar__icon">dark_mode</span>
-        <span class="sidebar__label">Theme</span>
-      </button>
-    </div>
+    <div class="header__group"></div>
   </header>
 
-  <main class="main main--narrow">
-    <h1>Videos</h1>
-    <div class="video-grid">
-      <iframe src="https://www.youtube-nocookie.com/embed/LQXJPqlSXbk?controls=0"></iframe>
-      <iframe src="https://www.youtube-nocookie.com/embed/k-ZuqT5eFi8?controls=0"></iframe>
-      <iframe src="https://www.youtube-nocookie.com/embed/rn8oDXls2VU?controls=0"></iframe>
-      <iframe src="https://www.youtube-nocookie.com/embed/2IWpqF2eUcI?controls=0"></iframe>
-      <iframe src="https://www.youtube-nocookie.com/embed/Zh1aW1Tg_bg?controls=0"></iframe>
-      <iframe src="https://www.youtube-nocookie.com/embed/PFu5ue-NvNk?controls=0"></iframe>
-    </div>
+  <main class="main">
+    <section>
+      <h1 class="visually-hidden">Product Videos</h1>
+      <div class="video-grid">
+        <div class="video-grid__video-wrapper">
+          <iframe class="video-grid__video" src="https://www.youtube-nocookie.com/embed/LQXJPqlSXbk?controls=1&fs=1"
+            allowfullscreen></iframe>
+          <h6 class="video-grid__title">
+            <strong>Application Example</strong>
+          </h6>
+        </div>
+        <iframe class="video-grid__video" src="https://www.youtube-nocookie.com/embed/k-ZuqT5eFi8?controls=0"></iframe>
+        <iframe class="video-grid__video" src="https://www.youtube-nocookie.com/embed/rn8oDXls2VU?controls=0"></iframe>
+        <iframe class="video-grid__video" src="https://www.youtube-nocookie.com/embed/2IWpqF2eUcI?controls=0"></iframe>
+        <iframe class="video-grid__video" src="https://www.youtube-nocookie.com/embed/Zh1aW1Tg_bg?controls=0"></iframe>
+        <iframe class="video-grid__video" src="https://www.youtube-nocookie.com/embed/PFu5ue-NvNk?controls=0"></iframe>
+      </div>
+    </section>
   </main>
 
   <footer class="footer">
     <p>
-      &copy; <span id="current-year"></span> Kemset. All rights reserved.
+      &copy; <span id="current-year"></span> Prokemplast. All rights reserved.
     </p>
   </footer>
+
+  <script src="./js/main.js"></script>
 </body>
 
 </html>
