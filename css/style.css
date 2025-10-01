@@ -473,4 +473,37 @@ footer {
   .video-grid {
     grid-template-columns: 1fr;
   }
+
+  /* Stack contact items vertically on mobile */
+  .contact-item__grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Stack footer columns vertically on mobile */
+  .footer__about {
+    flex-direction: column;
+    row-gap: 2rem;
+    column-gap: 0;
+    align-items: stretch;
+    justify-content: flex-start;
+    text-align: left;
+  }
+
+  /* Product details: stack image and content */
+  .product-display__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .product-display__image-wrapper {
+    position: static;
+    top: auto;
+    transform: none;
+    width: 100%;
+    max-width: 520px;
+    margin: 0 auto 1.5rem;
+  }
+
+  .product-display__details-wrapper {
+    max-width: 100%;
+  }
 }
