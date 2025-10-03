@@ -167,6 +167,20 @@ footer {
   text-align: left;
 }
 
+/* Footer list headings: bold and slightly larger */
+.footer__quick-links > li:first-child,
+.footer__contact-links > li:first-child {
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Increase spacing between footer list items */
+.footer__quick-links > li + li,
+.footer__contact-links > li + li {
+  margin-top: 0.35rem;
+}
+
 .footer__legal {
   margin-top: 5rem;
 }
@@ -442,12 +456,6 @@ footer {
 
   .sidebar__group:last-child {
     display: none;
-  }
-
-  .sidebar__button {
-    width: auto;
-    flex: 1;
-    height: 100%;
   }
 
   .sidebar__button:hover,
