@@ -14,8 +14,9 @@
   <meta property="og:type" content="product">
   <meta property="og:site_name" content="Prokemplast">
   <meta name="twitter:card" content="summary">
-  <script defer data-domain="prokemplast.com" src="https://plausible.io/js/script.js"></script>
+  <link rel="stylesheet" href="../css/fonts.css">
   <link href="../css/reset.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/variables.css">
   <link href="../css/style.css" rel="stylesheet">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=contact_page,home,info,subscriptions" />
 </head>
@@ -46,7 +47,7 @@
   <header>
     <div class="header__group">
       <div class="company-name">
-        Prokemplast
+        PROKEMPLAST
       </div>
     </div>
     <div class="header__group"></div>
@@ -55,7 +56,11 @@
   <main class="main">
     <div class="product-display__grid">
       <div class="product-display__image-wrapper">
-        <img class="product-display__image" src="https://kemset.com/product_images/1671539984_coarseprimerproduct.png" alt="Coarse Primer product" loading="lazy" decoding="async">
+        <picture>
+          <source type="image/avif" srcset="/images/kemset_coarse_primer_640.avif">
+          <source type="image/webp" srcset="/images/kemset_coarse_primer_640.webp">
+          <img class="product-display__image" src="/images/kemset_coarse_primer_640.jpg" alt="Coarse Primer product" fetchpriority="high">
+        </picture>
       </div>
 
       <div class="product-display__details-wrapper">

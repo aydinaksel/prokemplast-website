@@ -43,7 +43,7 @@ SEO
 - Canonical URLs point to the `www` domain. Adjust if your canonical preference changes.
 
 Analytics
-- Plausible snippet is included on pages. To disable, remove the `<script defer data-domain="prokemplast.com" src="https://plausible.io/js/script.js"></script>` tag and remove `https://plausible.io` from `script-src` and `connect-src` in `_headers`.
+- For analytics, we use Cloudflare Web Analytics (enabled in Cloudflare dashboard). No page snippet is required. Plausible has been removed.
 
 Future Enhancements
 - Add Stripe checkout and cart flow.

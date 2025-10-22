@@ -7,15 +7,19 @@
   <title>Prokemplast — Home</title>
   <meta name="description" content="Prokemplast manufactures and distributes sustainable, high‑performance construction products. Explore featured products, company info, videos, and contact details.">
   <link rel="canonical" href="https://www.prokemplast.com/">
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
   <meta property="og:title" content="Prokemplast — Home">
   <meta property="og:description" content="Sustainable, high‑performance construction products: featured items, about, videos, and contact.">
   <meta property="og:url" content="https://www.prokemplast.com/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Prokemplast">
   <meta name="twitter:card" content="summary">
-  <script defer data-domain="prokemplast.com" src="https://plausible.io/js/script.js"></script>
+  <link rel="stylesheet" href="css/fonts.css">
   <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/variables.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=contact_page,home,info,subscriptions" />
 </head>
@@ -44,10 +48,7 @@
   </nav>
 
   <header>
-    <div class="header__group">
-      <div class="company-name">PROKEMPLAST</div>
-    </div>
-    <div class="header__group"></div>
+    <div class="company-name">PROKEMPLAST</div>
   </header>
 
   <main class="main">
@@ -56,7 +57,11 @@
 
       <a class="product-grid__item" href="./products/ekoplast-50.html">
         <div class="product-grid__item-image-wrapper">
-          <img class="product-grid__item-image" src="https://kemset.com/frontImages/ekoplus50product.png" alt="Ekoplast 50 product" loading="lazy" decoding="async">
+          <picture>
+            <source type="image/avif" srcset="/images/kemset_ekoplast_50_640.avif">
+            <source type="image/webp" srcset="/images/kemset_ekoplast_50_640.webp">
+            <img class="product-grid__item-image" src="/images/kemset_ekoplast_50_640.jpg" alt="Ekoplast 50 product" fetchpriority="high">
+          </picture>
         </div>
         <div class="product-grid__item-details-wrapper">
           <h2 class="product-grid__item-details">Ekoplast 50</h2>
@@ -66,7 +71,11 @@
 
       <a class="product-grid__item" href="./products/coarse-primer.html">
         <div class="product-grid__item-image-wrapper">
-          <img class="product-grid__item-image" src="https://kemset.com/product_images/1671539984_coarseprimerproduct.png" alt="Coarse Primer product" loading="lazy" decoding="async">
+          <picture>
+            <source type="image/avif" srcset="/images/kemset_coarse_primer_640.avif">
+            <source type="image/webp" srcset="/images/kemset_coarse_primer_640.webp">
+            <img class="product-grid__item-image" src="/images/kemset_coarse_primer_640.jpg" alt="Coarse Primer product" fetchpriority="high">
+          </picture>
         </div>
         <div class="product-grid__item-details-wrapper">
           <h2 class="product-grid__item-details">Coarse Primer</h2>
@@ -76,7 +85,11 @@
 
       <a class="product-grid__item" href="./products/watertite-poly.html">
         <div class="product-grid__item-image-wrapper">
-          <img class="product-grid__item-image" src="https://kemset.com/product_images/1671539335_watertiepolyproduct.png" alt="Watertite Poly product" loading="lazy" decoding="async">
+          <picture>
+            <source type="image/avif" srcset="/images/kemset_watertite_poly_640.avif">
+            <source type="image/webp" srcset="/images/kemset_watertite_poly_640.webp">
+            <img class="product-grid__item-image" src="/images/kemset_watertite_poly_640.jpg" alt="Watertite Poly product" fetchpriority="high">
+          </picture>
         </div>
         <div class="product-grid__item-details-wrapper">
           <h2 class="product-grid__item-details">Watertite poly</h2>
@@ -86,7 +99,11 @@
 
       <a class="product-grid__item" href="./products/elasticote-450.html">
         <div class="product-grid__item-image-wrapper">
-          <img class="product-grid__item-image" src="https://kemset.com/product_images/1671537186_ELASTICOTE-450%20(1).png" alt="Elasticote 450 product" loading="lazy" decoding="async">
+          <picture>
+            <source type="image/avif" srcset="/images/kemset_elasticote_450_640.avif">
+            <source type="image/webp" srcset="/images/kemset_elasticote_450_640.webp">
+            <img class="product-grid__item-image" src="/images/kemset_elasticote_450_640.jpg" alt="Elasticote 450 product" fetchpriority="high">
+          </picture>
         </div>
         <div class="product-grid__item-details-wrapper">
           <h2 class="product-grid__item-details">Elasticote 450</h2>

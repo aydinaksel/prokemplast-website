@@ -1,63 +1,3 @@
-:root {
-  --text: #392e2b;
-  --surface: #fff8f6;
-  --surface-highest: #d4c3be;
-  --surface-high: #e2d1cc;
-  --surface-medium: #f1dfda;
-  --surface-low: #ffede8;
-  --surface-lowest: #FFC3B3;
-  --sidebar-width: 5.5rem;
-  --header-height: 5.5rem;
-  --mobile-sidebar-width: 4rem;
-  --md-sys-color-primary: rgb(3 43 91);
-  --md-sys-color-surface-tint: rgb(65 95 145);
-  --md-sys-color-on-primary: rgb(255 255 255);
-  --md-sys-color-primary-container: rgb(42 73 122);
-  --md-sys-color-on-primary-container: rgb(0 0 0);
-  --md-sys-color-secondary: rgb(35 44 61);
-  --md-sys-color-on-secondary: rgb(255 255 255);
-  --md-sys-color-secondary-container: rgb(65 73 91);
-  --md-sys-color-on-secondary-container: rgb(255 255 255);
-  --md-sys-color-tertiary: rgb(58 36 64);
-  --md-sys-color-on-tertiary: rgb(255 255 255);
-  --md-sys-color-tertiary-container: rgb(89 64 94);
-  --md-sys-color-on-tertiary-container: rgb(255 255 255);
-  --md-sys-color-error: rgb(96 0 4);
-  --md-sys-color-on-error: rgb(255 255 255);
-  --md-sys-color-error-container: rgb(152 0 10);
-  --md-sys-color-on-error-container: rgb(255 255 255);
-  --md-sys-color-background: rgb(249 249 255);
-  --md-sys-color-on-background: rgb(25 28 32);
-  --md-sys-color-surface: rgb(249 249 255);
-  --md-sys-color-on-surface: rgb(0 0 0);
-  --md-sys-color-surface-variant: rgb(224 226 236);
-  --md-sys-color-on-surface-variant: rgb(0 0 0);
-  --md-sys-color-outline: rgb(41 44 51);
-  --md-sys-color-outline-variant: rgb(70 73 81);
-  --md-sys-color-shadow: rgb(0 0 0);
-  --md-sys-color-scrim: rgb(0 0 0);
-  --md-sys-color-inverse-surface: rgb(46 48 54);
-  --md-sys-color-inverse-on-surface: rgb(255 255 255);
-  --md-sys-color-inverse-primary: rgb(170 199 255);
-  --md-sys-color-primary-fixed: rgb(42 73 122);
-  --md-sys-color-on-primary-fixed: rgb(255 255 255);
-  --md-sys-color-primary-fixed-dim: rgb(14 50 98);
-  --md-sys-color-on-primary-fixed-variant: rgb(255 255 255);
-  --md-sys-color-secondary-fixed: rgb(65 73 91);
-  --md-sys-color-on-secondary-fixed: rgb(255 255 255);
-  --md-sys-color-secondary-fixed-dim: rgb(42 51 68);
-  --md-sys-color-on-secondary-fixed-variant: rgb(255 255 255);
-  --md-sys-color-tertiary-fixed: rgb(89 64 94);
-  --md-sys-color-on-tertiary-fixed: rgb(255 255 255);
-  --md-sys-color-tertiary-fixed-dim: rgb(65 42 71);
-  --md-sys-color-on-tertiary-fixed-variant: rgb(255 255 255);
-  --md-sys-color-surface-dim: rgb(184 184 191);
-  --md-sys-color-surface-bright: rgb(249 249 255);
-  --md-sys-color-surface-container-lowest: rgb(255 255 255);
-  --md-sys-color-surface-container-low: rgb(240 240 247);
-  --md-sys-color-surface-container: rgb(226 226 233);
-  --md-sys-color-surface-container-high: rgb(211 212 219);
-  --md-sys-color-surface-container-highest: rgb(197 198 205);}
 
 h1,
 h2,
@@ -102,7 +42,7 @@ body {
   font-size: 16px;
   background-color: var(--md-sys-color-background);
   color: var(--md-sys-color-on-background);
-  font-family: system-ui, -apple-system, sans-serif;
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
 }
 
 header {
@@ -115,10 +55,10 @@ header {
   left: 0;
   z-index: 10;
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: row;
-  justify-content: space-between;
   box-sizing: border-box;
-  padding-left: 2rem;
 }
 
 .header__group {
@@ -157,6 +97,7 @@ header {
   background-color: var(--md-sys-color-surface-container);
   display: grid;
   place-items: center;
+  position: relative;
 }
 
 .hero-image img {
@@ -164,7 +105,12 @@ header {
   height: 100%;
   object-fit: cover;
   display: block;
-  filter: blur(1px);
+}
+
+.hero-image picture {
+  width: 100%;
+  height: 100%;
+  display: block;
 }
 
 footer {
@@ -211,7 +157,7 @@ footer {
 }
 
 .company-name {
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   font-weight: 800;
 }
 
@@ -424,6 +370,55 @@ footer {
 
 .product-display__details-wrapper {
   max-width: 70ch;
+}
+
+/* Contact form */
+.contact-form {
+  background-color: var(--md-sys-color-surface-container);
+  border-radius: 1.168rem;
+  padding: 2rem;
+  margin-top: 2rem;
+}
+
+.contact-form .form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.contact-form label {
+  font-weight: 600;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 0.75rem 0.9rem;
+  border-radius: 1.168rem;
+  border: 1px solid var(--md-sys-color-surface-container-high);
+  background: var(--md-sys-color-surface);
+  color: var(--md-sys-color-on-surface);
+  font: inherit;
+}
+
+.contact-form button.button {
+  display: inline-block;
+  background-color: var(--md-sys-color-primary);
+  color: var(--md-sys-color-on-primary);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 1.168rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.contact-form button.button:hover,
+.contact-form button.button:focus {
+  background-color: var(--md-sys-color-primary-fixed);
+}
+
+#contact-status {
+  margin-top: 0.75rem;
 }
 
 .visually-hidden {
