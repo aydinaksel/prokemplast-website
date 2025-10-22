@@ -139,7 +139,6 @@ footer {
   text-align: left;
 }
 
-/* Footer list headings: bold and slightly larger */
 .footer__quick-links > li:first-child,
 .footer__contact-links > li:first-child {
   font-weight: 700;
@@ -147,13 +146,13 @@ footer {
   margin-bottom: 0.5rem;
 }
 
-/* Increase spacing between footer list items */
 .footer__quick-links > li + li,
 .footer__contact-links > li + li {
   margin-top: 0.35rem;
 }
 
 .footer__legal {
+  padding-top: 4rem;
 }
 
 .company-name {
@@ -372,7 +371,6 @@ footer {
   max-width: 70ch;
 }
 
-/* Contact form */
 .contact-form {
   background-color: var(--md-sys-color-surface-container);
   border-radius: 1.168rem;
@@ -454,7 +452,8 @@ footer {
   footer {
     margin-bottom: var(--sidebar-width);
     margin-left: 0;
-    padding: 0 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 
   .sidebar {

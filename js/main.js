@@ -6,10 +6,6 @@ function scrollToTop() {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-function setCurrentYear() {
-  document.getElementById('current-year').textContent = new Date().getFullYear();
-}
-
 function activeLink() {
   const currentPath = window.location.pathname.split('/').pop() || 'index.html';
 
@@ -28,6 +24,5 @@ function activeLink() {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-  setCurrentYear();
   activeLink();
 });
