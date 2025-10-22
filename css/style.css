@@ -45,6 +45,39 @@ body {
   font-family: "Inter", system-ui, -apple-system, sans-serif;
 }
 
+/* Buttons */
+.button {
+  display: inline-block;
+  background-color: var(--md-sys-color-primary);
+  color: var(--md-sys-color-on-primary);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 1.168rem;
+  cursor: pointer;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.button:hover,
+.button:focus {
+  background-color: var(--md-sys-color-primary-fixed);
+  text-decoration: none;
+}
+
+.button--secondary {
+  background: transparent;
+  color: var(--md-sys-color-secondary-container);
+  border: 1px solid var(--md-sys-color-surface-container-high);
+}
+
+.button--secondary:hover,
+.button--secondary:focus {
+  background-color: var(--md-sys-color-primary-fixed);
+  color: white;
+  text-decoration: none;
+}
+
+
 header {
   background-color: var(--md-sys-color-surface-container-high);
   height: var(--header-height);
@@ -417,6 +450,15 @@ footer {
 
 #contact-status {
   margin-top: 0.75rem;
+}
+
+/* Product actions */
+.product-actions {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 1.5rem 0 2rem;
 }
 
 .visually-hidden {
